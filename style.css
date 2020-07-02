@@ -36,6 +36,20 @@ p {
   margin: 0 10px;
 }
 
+.section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  text-align: center;
+}
+
+.section-title span {
+  color: crimson;
+}
+
 /* Hero Section */
 #hero {
   background-image: url(./images/hero-bg.png);
@@ -139,20 +153,6 @@ p {
   padding: 100px 0;
 }
 
-#services .section-title {
-  font-size: 4rem;
-  font-weight: 300;
-  color: black;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
-  text-align: center;
-}
-
-#services .section-title span {
-  color: crimson;
-}
-
 #services .service-top p {
   color: black;
 }
@@ -210,8 +210,39 @@ p {
   color: white;
   text-align: left;
 }
-
 /* End Services Section */
+
+/* Projects Section */
+#projects .projects {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+#projects .projects-top h1 {
+  margin-bottom: 50px;
+}
+
+#projects .projects-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects .project-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* End Projects Section */
 
 
 /* Keyframes  */
