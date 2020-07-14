@@ -384,7 +384,8 @@ p {
   color: #fff; }
   #projects .project-info h1 {
     font-size: 4rem;
-    font-weight: 500; }
+    font-weight: 500;
+    margin-bottom: 20px; }
   #projects .project-info h2 {
     font-size: 1.8rem;
     font-weight: 500;
