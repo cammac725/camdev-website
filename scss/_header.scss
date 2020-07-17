@@ -81,16 +81,16 @@
           }
         }
 
-        .active {
-          .bar {
+      }
 
-            &::after {
-              top: 0;
-            }
-            
-            &::before {
-              bottom: 0;
-            }
+      .hamburger.active {
+        .bar {
+          &::after {
+            top: 0;
+          }
+          
+          &::before {
+            bottom: 0;
           }
         }
       }
@@ -157,13 +157,13 @@
   }
 }
 
-#header .header .nav-list .hamburger.active .bar::before {
-  bottom: 0;
-}
+// #header .header .nav-list .hamburger.active .bar::before {
+//   bottom: 0;
+// }
 
-#header .header .nav-list .hamburger.active .bar::after {
-  top: 0;
-}
+// #header .header .nav-list .hamburger.active .bar::after {
+//   top: 0;
+// }
 
 /* Media Query for Desktop */
 @media only screen and (min-width: 1200px) {
