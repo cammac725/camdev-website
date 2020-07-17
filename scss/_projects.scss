@@ -48,6 +48,27 @@
     }
     p {
       color: $color-white;
+      margin-bottom: 10px;
+    }
+    .cta {
+      display: inline-block;
+      width: 40%;
+      padding: 5px 10px;
+      color: $color-crimson;
+      background-color: transparent;
+      text-align: center;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+      margin: 10px;
+      transition: .3s ease;
+      transition-property: background-color, color;
+      @include border(2px, solid, $color-crimson);
+
+      &:hover {
+        color: $color-white;
+        background: $color-crimson;
+      }
     }
   }
   .project-img {

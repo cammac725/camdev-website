@@ -152,6 +152,8 @@ p {
         top: 0; }
       #header .header .nav-list .hamburger .active .bar::before {
         bottom: 0; }
+    #header .header .nav-list ul.active {
+      left: 0; }
     #header .header .nav-list ul {
       list-style: none;
       position: absolute;
@@ -167,8 +169,6 @@ p {
       z-index: 1;
       overflow-x: hidden;
       transition: .5s ease left; }
-      #header .header .nav-list ul .active {
-        left: 0; }
       #header .header .nav-list ul a {
         font-size: 2.5rem;
         font-weight: 500;
@@ -388,7 +388,25 @@ p {
     font-weight: 500;
     margin-top: 10px; }
   #projects .project-info p {
-    color: #fff; }
+    color: #fff;
+    margin-bottom: 10px; }
+  #projects .project-info .cta {
+    display: inline-block;
+    width: 40%;
+    padding: 5px 10px;
+    color: #dc143c;
+    background-color: transparent;
+    text-align: center;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin: 10px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+    border: 2px solid #dc143c; }
+    #projects .project-info .cta:hover {
+      color: #fff;
+      background: #dc143c; }
 #projects .project-img {
   flex-basis: 50%;
   height: 300px;

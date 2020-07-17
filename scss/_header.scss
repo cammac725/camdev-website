@@ -95,6 +95,10 @@
         }
       }
 
+      ul.active {
+          left: 0;
+        }
+
       ul {
         list-style: none;
         position: absolute;
@@ -110,10 +114,6 @@
         z-index: 1;
         overflow-x: hidden;
         transition: .5s ease left;
-
-        .active {
-          left: 0;
-        }
 
         a {
           font-size: 2.5rem;
