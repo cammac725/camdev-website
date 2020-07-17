@@ -68,11 +68,11 @@ p {
   transition: .3s ease;
   transition-property: background-color, color;
   @include border(2px, solid, $color-crimson);
-}
 
-.cta:hover {
-  color: $color-white;
-  background: $color-crimson;
+  &:hover {
+    color: $color-white;
+    background: $color-crimson;
+  }
 }
 
 .brand {
