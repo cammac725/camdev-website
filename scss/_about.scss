@@ -7,27 +7,44 @@
     margin: 0 auto;
     padding: 100px 20px;
   }
+
   .col-left {
     width: 250px;
     height: 360px;
+
     .about-img {
       height: 100%;
       width: 100%;
       position: relative;
       @include border(10px, solid, $color-white);
+      
+      &::after {
+        content: '';
+        position: absolute;
+        left: -33px;
+        top: 19px;
+        height: 98%;
+        width: 98%;
+        @include border(7px, solid, $color-crimson);
+        z-index: -1;
+      }
     }
   }
+
   .col-right {
     width: 100%;
+
     h2 {
       font-size: 1.8rem;
       font-weight: 500;
       letter-spacing: .2rem;
       margin-bottom: 10px;
     }
+
     p {
       margin-bottom: 20px;
     }
+
     .cta {
       color: $color-black;
       margin-bottom: 50px;
@@ -37,49 +54,46 @@
   }
 }
 
-#about .col-left .about-img::after {
-  content: '';
-  position: absolute;
-  left: -33px;
-  top: 19px;
-  height: 98%;
-  width: 98%;
-  @include border(7px, solid, $color-crimson);
-  z-index: -1;
-}
 
 /* Media Query for Tablet */
 @media only screen and (min-width: 768px){
-
-  #about .about {
-    flex-direction: row;
-    padding: 0 20px;
+  #about {
+    .about {
+      flex-direction: row;
+      padding: 0 20px;
+      
+      .col-left {
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+        
+        .about-img {
+          &::after {
+            left: -45px;
+            top: 34px;
+            height: 98%;
+            width: 98%;
+            @include border(10px, solid, $color-crimson);
+          }
+        }
+      }
+    }
   }
 
-  #about .about .col-left {
-    width: 600px;
-    height: 400px;
-    padding-left: 60px;
-  }
-
-  #about .about .col-left .about-img::after {
-    left: -45px;
-    top: 34px;
-    height: 98%;
-    width: 98%;
-    @include border(10px, solid, $color-crimson);
-  }
-
-  #about .about .col-right {
-    text-align: left;
-    padding: 30px;
-  }
-
-  #about .about .col-right h1 {
-    text-align: left;
-  }
-
-  #about .about .col-right p {
-    margin-left: 0;
+  #about {
+    .about {
+      .col-right {
+        text-align: left;
+        padding: 30px;
+        
+        h1 {
+          text-align: left;
+        }
+        
+        p {
+          margin-left: 0;
+        }
+      }
+    }
   }
 }
