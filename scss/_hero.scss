@@ -5,12 +5,14 @@
   background-position: top center;
   position: relative;
   z-index: 1;
+
   .hero {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 50px;
     justify-content: flex-start;
   }
+
   h1 {
     display: block;
     width: fit-content;
@@ -19,6 +21,7 @@
     color: transparent;
     animation: text_reveal .5s ease forwards;
     animation-delay: 1s;
+
     span {
       position: absolute;
       top: 0;
@@ -29,48 +32,50 @@
       animation: text_reveal_box 1s ease;
       animation-delay: .3s;
     }
+
+    &:nth-child(1) {
+      animation-delay: 1s;
+      
+      span {
+        animation-delay: .5s;
+      }
+    }
+    
+    &:nth-child(2) {
+      animation-delay: 2s;
+      
+      span {
+        animation-delay: 1.5s;
+      }
+    }
+    
+    &:nth-child(3) {
+      animation: text_reveal_name .5s ease forwards;
+      animation-delay: 3s;
+      
+      span {
+        animation-delay: 2.5s;
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $color-black;
+    opacity: .7;
+    z-index: -1
   }
 }
 
-#hero::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: $color-black;
-  opacity: .7;
-  z-index: -1
-}
-
-#hero h1:nth-child(1) {
-  animation-delay: 1s;
-}
-
-#hero h1:nth-child(2) {
-  animation-delay: 2s;
-}
-
-#hero h1:nth-child(3) {
-  animation: text_reveal_name .5s ease forwards;
-  animation-delay: 3s;
-}
-
-#hero h1:nth-child(1) span {
-  animation-delay: .5s;
-}
-
-#hero h1:nth-child(2) span {
-  animation-delay: 1.5s;
-}
-
-#hero h1:nth-child(3) span {
-  animation-delay: 2.5s;
-}
-
 @media only screen and (min-width: 768px){
-  #hero h1 {
-    font-size: 7rem;
+  #hero {
+    h1 {
+      font-size: 7rem;
+    } 
   }
 }
