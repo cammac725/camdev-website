@@ -6,15 +6,20 @@
     margin: 0 auto;
     padding: 70px 0;
   }
-  .projects-top h1 {
-    margin-bottom: 50px;
+
+  .projects-top {
+    h1 {
+      margin-bottom: 50px;
+    }
   }
+
   .projects-bottom {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .project-item {
     display: flex;
     justify-content: center;
@@ -24,7 +29,16 @@
     margin: 20px 0;
     overflow: hidden;
     border-radius: 10px;
+
+    &:hover {
+      .project-img {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
+
   .project-info {
     padding: 30px;
     flex-basis: 50%;
@@ -36,20 +50,24 @@
     flex-direction: column;
     background-image: linear-gradient(60deg, $color-gradient1 0%, $color-gradient2 100%);
     color: $color-white;
+
     h1 {
       font-size: 4rem;
       font-weight: 500;
       margin-bottom: 20px;
     }
+
     h2 {
       font-size: 1.8rem;
       font-weight: 500;
       margin-top: 10px;
     }
+
     p {
       color: $color-white;
       margin-bottom: 10px;
     }
+
     .btn {
       display: inline-block;
       width: 40%;
@@ -71,47 +89,51 @@
       }
     }
   }
+
   .project-img {
     flex-basis: 50%;
     height: 300px;
     overflow: hidden;
     position: relative;
+
     img {
       transition: .3s ease transform;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(60deg,$color-gradient1 0%, $color-gradient2 100%);
+      opacity: .7;
     }
   }
 }
 
-#projects .project-img::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(60deg,$color-gradient1 0%, $color-gradient2 100%);
-  opacity: .7;
-}
-
-#projects .project-item:hover .project-img img {
-  transform: scale(1.1);
-}
-
 /* Media Query for Tablet */
 @media only screen and (min-width: 768px){
-  #projects .project-item {
-    flex-direction: row;
-    height: 400px;
-    width: 100%;
-    margin: 0;
-    border-radius: 0;
+  #projects {
+    .project-item {
+      flex-direction: row;
+      height: 400px;
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+      
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
   }
 
-  #projects .project-item:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-
-  #projects .projects-bottom .project-img {
-    height: 100%;
+  #projects {
+    .projects-bottom {
+      .project-img {
+        height: 100%;
+      }
+    }
   }
 }
