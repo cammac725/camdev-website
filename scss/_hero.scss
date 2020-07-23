@@ -10,7 +10,25 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 50px;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  h2 {
+    display: block;
+    margin-bottom: 10px;
+    width: fit-content;
+    font-size: 2rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 3.3s;
+
+  }
+
+  h2#subheader {
+    margin-top: 30px;
   }
 
   h1 {
@@ -76,6 +94,10 @@
   #hero {
     h1 {
       font-size: 7rem;
-    } 
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
   }
 }

@@ -58,6 +58,8 @@ p {
 
 .cta {
   display: inline-block;
+  width: 200px;
+  text-align: center;
   padding: 10px 30px;
   color: $color-crimson;
   background-color: transparent;
@@ -93,8 +95,9 @@ p {
 /* Media Query for Tablet */
 @media only screen and (min-width: 768px){
   .cta {
+    width: 300px;
     font-size: 2.5rem;
-    padding: 20px 60px;
+    padding: 20px 40px;
   }
 
   h1.section-title {
