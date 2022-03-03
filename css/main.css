@@ -100,6 +100,7 @@ p {
   }
 }
 /* End Media Query for Tablet */
+
 /* Header Section */
 #header {
   position: fixed;
@@ -666,6 +667,9 @@ p {
     margin: 20px;
   }
 }
+
+/* Footer */
+
 #footer {
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
